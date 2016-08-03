@@ -403,6 +403,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = calabash_default/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"\"$(SOURCE_ROOT)/calabash.framework/calabash\"",
+					"-framework",
+					CFNetwork,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.TulioBZ.calabash-default";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -484,6 +491,7 @@
 				65DC12711D51881D00C458F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65DC12721D51881D00C458F5 /* Build configuration list for PBXNativeTarget "calabash_defaultTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +500,7 @@
 				65DC12741D51881D00C458F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65DC12751D51881D00C458F5 /* Build configuration list for PBXNativeTarget "calabash_defaultUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				65DC12771D51881D00C458F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
